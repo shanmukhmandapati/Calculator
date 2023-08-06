@@ -4,32 +4,40 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    print("Welcome to Calculator")
+    return("Welcome to Calculator")
 
 
-@app.route('/add', methods=["POST"])
+@app.route('/add', methods=["GET"])
 def add():
     data = request.get_json()
     num1 = data['num1']
     num2 = data['num2']
     result = num1 + num2
-    return jsonify({'result': result})
+    return jsonify({'The sum of two numbers is ': result})
 
-@app.route('/sub', methods=["POST"])
+@app.route('/sub', methods=["GET"])
 def sub():
     data = request.get_json()
     num1 = data['num1']
     num2 = data['num2']
     result = num1 - num2
-    return jsonify({'result': result})
+    return jsonify({'The subtraction of two numbers is ': result})
 
-@app.route('/multiply', methods=["POST"])
+@app.route('/multiply', methods=["GET"])
 def multiply():
     data = request.get_json()
     num1 = data['num1']
     num2 = data['num2']
     result = num1 * num2 
-    return jsonify({'result': result})
+    return jsonify({'The multiplication of two numbers is ': result})
+
+@app.route('/division',methods=["GET"])
+def division():
+    data = request.get_json()
+    num1 = data['num1']
+    num2 = data['num2']
+    result = num1/num2
+    return jsonify("The division of two numbers are", result)
 
 
 
