@@ -1,0 +1,13 @@
+prefix=/Users/smandapati/Desktop/Shanmukh/ineuron/shan
+exec_prefix=/Users/smandapati/Desktop/Shanmukh/ineuron/shan
+libdir=/Users/smandapati/Desktop/Shanmukh/ineuron/shan/lib
+sharedlibdir=/Users/smandapati/Desktop/Shanmukh/ineuron/shan/lib
+includedir=/Users/smandapati/Desktop/Shanmukh/ineuron/shan/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

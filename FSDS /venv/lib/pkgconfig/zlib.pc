@@ -1,0 +1,13 @@
+prefix=/Users/smandapati/Desktop/FSDS /venv
+exec_prefix=/Users/smandapati/Desktop/FSDS /venv
+libdir=/Users/smandapati/Desktop/FSDS /venv/lib
+sharedlibdir=/Users/smandapati/Desktop/FSDS /venv/lib
+includedir=/Users/smandapati/Desktop/FSDS /venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
